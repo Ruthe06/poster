@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poster + Ads Tool</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="description" content="Merge posters with ad banners and share manually.">
+</head>
+
+<body>
+
+    <main id="app">
+        <!-- view: Home -->
+        <section id="view-home" class="view active">
+            <header class="app-header">
+                <h1>Select User</h1>
+                <p>Choose your profile to start</p>
+            </header>
+
+            <div class="user-selection">
+                <button class="btn btn-user" data-user="1">
+                    <span class="icon">👤</span>
+                    <span>Ruthna Plates</span>
+                </button>
+                <button class="btn btn-user" data-user="2">
+                    <span class="icon">👥</span>
+                    <span>Sivasakthil Jewelery</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- view: Upload/Preview -->
+        <section id="view-upload" class="view hidden">
+            <header class="app-header">
+                <button id="btn-back" class="btn-icon" aria-label="Go Back">←</button>
+                <h1>Upload Poster</h1>
+            </header>
+
+            <div class="upload-container">
+                <input type="file" id="file-input" accept="image/png, image/jpeg, image/jpg, image/webp" hidden>
+
+                <div class="drop-zone" id="drop-zone">
+                    <span class="icon">upload</span>
+                    <p>Tap to upload poster</p>
+                    <small>Max 10MB (JPG, PNG, WEBP)</small>
+                </div>
+            </div>
+
+            <div id="preview-container" class="preview-container hidden">
+                <div class="canvas-wrapper">
+                    <!-- Canvas will be inserted here -->
+                </div>
+
+                <div class="actions">
+                    <button id="btn-share" class="btn btn-primary hidden">
+                        Share Image
+                    </button>
+                    <button id="btn-download" class="btn btn-secondary">
+                        Download Image
+                    </button>
+                </div>
+            </div>
+
+            <div id="error-message" class="error-toast hidden"></div>
+        </section>
+    </main>
+
+    <script src="js/banners.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
