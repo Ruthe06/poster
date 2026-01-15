@@ -7,8 +7,8 @@ def to_base64(path):
 
 try:
     # Using jewellery-banner.png for User 1
-    b1 = to_base64("d:/p/assets/jewellery-banner.png")
-    b2 = to_base64("d:/p/assets/banner2.png")
+    b1 = to_base64("d:/p/assets/banner.png")
+    b2 = to_base64("d:/p/assets/jewellery-banner.png")
 
     with open("d:/p/js/banners.js", "w") as f:
         f.write(f"const BANNERS = {{\n  '1': '{b1}',\n  '2': '{b2}'\n}};")
