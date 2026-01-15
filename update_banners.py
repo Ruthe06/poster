@@ -6,8 +6,8 @@ def to_base64(path):
         return f"data:image/png;base64,{base64.b64encode(image_file.read()).decode('utf-8')}"
 
 try:
-    # Using banner.png for User 1 as requested
-    b1 = to_base64("d:/p/assets/banner.png")
+    # Using jewellery-banner.png for User 1
+    b1 = to_base64("d:/p/assets/jewellery-banner.png")
     b2 = to_base64("d:/p/assets/banner2.png")
 
     with open("d:/p/js/banners.js", "w") as f:
