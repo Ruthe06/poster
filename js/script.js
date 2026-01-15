@@ -6,7 +6,7 @@ const CONFIG = {
     canvasWidth: 1080,
     bannerHeight: 319,
     users: {
-        '1': 'assets/banner.png',
+        '1': 'assets/plates-banner.png',
         '2': 'assets/jewellery-banner.png'
     },
     maxFileSize: 10 * 1024 * 1024 // 10MB
@@ -155,7 +155,7 @@ function mergeImages(posterImg) {
         // Calculate dimensions
         // Target width is fixed 1080
         const scale = CONFIG.canvasWidth / posterImg.width;
-        const posterHeight = posterImg.height * scale;
+        const posterHeight = Math.round(posterImg.height * scale);
 
         canvas.width = CONFIG.canvasWidth;
         canvas.height = posterHeight + CONFIG.bannerHeight;

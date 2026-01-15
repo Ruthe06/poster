@@ -7,7 +7,7 @@ def to_base64(path):
 
 try:
     # Using jewellery-banner.png for User 1
-    b1 = to_base64("d:/p/assets/banner.png")
+    b1 = to_base64("d:/p/assets/plates-banner.png")
     b2 = to_base64("d:/p/assets/jewellery-banner.png")
 
     with open("d:/p/js/banners.js", "w") as f:
