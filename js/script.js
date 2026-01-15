@@ -6,8 +6,8 @@ const CONFIG = {
     canvasWidth: 1080,
     bannerHeight: 319,
     users: {
-        '1': 'assets/banner1.png',
-        '2': 'assets/banner2.png'
+        '1': 'assets/banner.png',
+        '2': 'assets/jewellery-banner.png'
     },
     maxFileSize: 10 * 1024 * 1024 // 10MB
 };
@@ -144,6 +144,8 @@ function processFile(file) {
 function mergeImages(posterImg) {
     // Use Base64 banner to prevent canvas tainting (SecurityError)
     const bannerSrc = BANNERS[state.selectedUser];
+    console.log('Selected User:', state.selectedUser);
+    console.log('Banner Src Length:', bannerSrc ? bannerSrc.length : 'undefined');
     const bannerImg = new Image();
 
     bannerImg.onload = () => {
